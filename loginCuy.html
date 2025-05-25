@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 40px;
+      line-height: 1.6;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    input {
+      display: block;
+      width: 250px;
+      padding: 8px;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    button {
+      padding: 8px 16px;
+      font-size: 14px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    button:disabled {
+      background-color: #aaa;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <h1>Login untuk mengakses</h1>
+  <p>nama: admin</p>
+  <p>password: 12345</p>
+
+  <input type="text" id="username" placeholder="Nama">
+  <input type="password" id="password" placeholder="Password">
+  <button id="loginBtn" disabled>Masuk</button>
+
+  <script>
+    const usernameInput = document.getElementById('username');
+    const passwordInput = document.getElementById('password');
+    const loginBtn = document.getElementById('loginBtn');
+
+    function checkInput() {
+      const username = usernameInput.value;
+      const password = passwordInput.value;
+
+      loginBtn.disabled = !(username === 'admin' && password === '12345');
+    }
+
+    usernameInput.addEventListener('input', checkInput);
+    passwordInput.addEventListener('input', checkInput);
+
+    loginBtn.addEventListener('click', function () {
+      if (usernameInput.value === 'admin' && passwordInput.value === '12345') {
+        window.location.href = 'halamanUtama.html';
+      }
+    });
+  </script>
+</body>
+</html>

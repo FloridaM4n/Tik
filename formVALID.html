@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Form HTML Sederhana</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #ffffff;
+            padding: 20px;
+            color: #000;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        a.back-button {
+            display: inline-block;
+            margin-bottom: 15px;
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        a.back-button:hover {
+            text-decoration: underline;
+        }
+
+        form {
+            border: 1px solid #ccc;
+            padding: 15px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        input[type="date"],
+        input[type="file"] {
+            display: block;
+            width: 100%;
+            padding: 6px;
+            margin-top: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            margin-top: 15px;
+            padding: 8px 12px;
+        }
+
+        p {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="halamanUtama.html" class="back-button">Kembali ke halaman utama</a>
+
+    <h1>Cek Khodam</h1>
+    <form action="#" method="post">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="password">Kata Sandi:</label>
+        <input type="password" id="password" name="password">
+
+        <label>
+            <input type="checkbox" name="sigma" value="ya">
+            Centang jika kamu adalah sigma
+        </label>
+
+        <p>Jenis Kelamin:</p>
+        <label><input type="radio" name="gender" value="pria"> Pria</label>
+        <label><input type="radio" name="gender" value="wanita"> Wanita</label>
+        
+        <label for="umur">Umur:</label>
+        <input type="number" id="umur" name="umur" min="1" max="100">
+
+        <label for="tanggal">Tanggal Lahir:</label>
+        <input type="date" id="tanggal" name="tanggal">
+
+        <label for="berkas">Unggah Berkas:</label>
+        <input type="file" id="berkas" name="berkas">
+
+        <input type="submit" value="Kirim">
+    </form>
+</body>
+</html>
